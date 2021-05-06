@@ -1,0 +1,2 @@
+module VaccinationCentersHelper
+end

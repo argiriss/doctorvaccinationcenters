@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vaccination Centers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Zip</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vaccination_centers.each do |vaccination_center| %>
+      <tr>
+        <td><%= vaccination_center.name %></td>
+        <td><%= vaccination_center.address %></td>
+        <td><%= vaccination_center.zip %></td>
+        <td><%= link_to 'Show', vaccination_center %></td>
+        <td><%= link_to 'Edit', edit_vaccination_center_path(vaccination_center) %></td>
+        <td><%= link_to 'Destroy', vaccination_center, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vaccination Center', new_vaccination_center_path %>
