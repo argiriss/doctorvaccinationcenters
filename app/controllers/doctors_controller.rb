@@ -2,7 +2,7 @@ class DoctorsController < ApplicationController
   before_action :set_doctor, only: %i[ show edit update destroy ]
 
   def index
-    @doctors = Doctor.all
+    @doctors = Doctor.all.page(params[:page]).per(10)
   end
 
   def show
