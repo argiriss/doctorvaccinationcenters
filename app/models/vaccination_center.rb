@@ -1,4 +1,4 @@
 class VaccinationCenter < ApplicationRecord
-  has_many :doctors, dependent: :delete_all
+  has_and_belongs_to_many :doctors
   validates_presence_of :name, :address
 end

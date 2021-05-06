@@ -13,16 +13,7 @@
   </thead>
 
   <tbody>
-    <% @vaccination_centers.each do |vaccination_center| %>
-      <tr>
-        <td><%= vaccination_center.name %></td>
-        <td><%= vaccination_center.address %></td>
-        <td><%= vaccination_center.zip %></td>
-        <td><%= link_to 'Show', vaccination_center %></td>
-        <td><%= link_to 'Edit', edit_vaccination_center_path(vaccination_center) %></td>
-        <td><%= link_to 'Destroy', vaccination_center, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%= render @vaccination_centers %>
   </tbody>
 </table>
 

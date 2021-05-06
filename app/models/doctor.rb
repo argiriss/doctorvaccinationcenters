@@ -1,4 +1,4 @@
 class Doctor < ApplicationRecord
-  belongs_to :vaccination_center
+  has_and_belongs_to_many :vaccination_centers
   validates_presence_of :name, :speciality
 end

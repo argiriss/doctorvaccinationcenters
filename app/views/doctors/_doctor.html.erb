@@ -1,0 +1,9 @@
+<tr>
+  <td><%= doctor.name %></td>
+  <td><%= doctor.speciality %></td>
+  <td><%= doctor.vaccination_center_id %></td>
+  <td><%= doctor.vaccination_centers.size %></td>
+  <td><%= link_to 'Show', doctor %></td>
+  <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+  <td><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
