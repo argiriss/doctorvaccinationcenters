@@ -1,25 +1,20 @@
 class VaccinationCentersController < ApplicationController
   before_action :set_vaccination_center, only: %i[ show edit update destroy ]
 
-  # GET /vaccination_centers or /vaccination_centers.json
   def index
     @vaccination_centers = VaccinationCenter.all
   end
 
-  # GET /vaccination_centers/1 or /vaccination_centers/1.json
   def show
   end
 
-  # GET /vaccination_centers/new
   def new
     @vaccination_center = VaccinationCenter.new
   end
 
-  # GET /vaccination_centers/1/edit
   def edit
   end
 
-  # POST /vaccination_centers or /vaccination_centers.json
   def create
     @vaccination_center = VaccinationCenter.new(vaccination_center_params)
 
@@ -34,7 +29,6 @@ class VaccinationCentersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /vaccination_centers/1 or /vaccination_centers/1.json
   def update
     respond_to do |format|
       if @vaccination_center.update(vaccination_center_params)
@@ -47,7 +41,6 @@ class VaccinationCentersController < ApplicationController
     end
   end
 
-  # DELETE /vaccination_centers/1 or /vaccination_centers/1.json
   def destroy
     @vaccination_center.destroy
     respond_to do |format|
@@ -57,12 +50,10 @@ class VaccinationCentersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_vaccination_center
       @vaccination_center = VaccinationCenter.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def vaccination_center_params
       params.require(:vaccination_center).permit(:name, :address, :zip)
     end
