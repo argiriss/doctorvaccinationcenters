@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_07_073933) do
+ActiveRecord::Schema.define(version: 2021_05_07_093233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,8 @@ ActiveRecord::Schema.define(version: 2021_05_07_073933) do
   create_table "doctors", force: :cascade do |t|
     t.string "name"
     t.string "speciality"
-    t.bigint "vaccination_center_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["vaccination_center_id"], name: "index_doctors_on_vaccination_center_id"
   end
 
   create_table "doctors_vaccination_centers", id: false, force: :cascade do |t|
