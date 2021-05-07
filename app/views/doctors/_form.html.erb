@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :vaccination_centers %>
-    <%= form.collection_select(:vaccination_centers, VaccinationCenter.order(:name), :id, :name, {}, { multiple: true }) %>
+    <%= form.label :vaccination_center_ids %>
+    <%= form.collection_select(:vaccination_center_ids, VaccinationCenter.order(:name), :id, :name, {}, { multiple: true }) %>
   </div>
 
   <div class="actions">

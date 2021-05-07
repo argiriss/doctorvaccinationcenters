@@ -55,6 +55,6 @@ class DoctorsController < ApplicationController
     end
 
     def doctor_params
-      params.require(:doctor).permit(:name, :speciality, :vaccination_center_id)
+      params.require(:doctor).permit(:name, :speciality, vaccination_center_ids: [])
     end
 end
