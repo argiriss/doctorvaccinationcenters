@@ -1,10 +1,14 @@
-<div class="col-md-4 col-sm-12">
+<div class="col-md-6 col-sm-12 mb-3">
   <div class="card">
     <div class="card-body">
       <h4 class="card-title text-center"><%= link_to "#{doctor.name}", doctor %></h4>
       <p class="card-text">
         <strong>Speciality: </strong><%= doctor.speciality %><br>
-        <strong>Vaccination Centers: </strong> <span class="vaccination-centers-number"><%= doctor.vaccination_centers.size %></span>
+        <div class="doctor-vaccination-centers">
+          <strong>Vaccination Centers: </strong>
+          <span class="vaccination-centers-number" data-toggle="modal" data-target=<%= "#doctor-#{doctor.id}-modal" %>><%="(#{ doctor.vaccination_centers.size})" %></span>
+          <%= render partial: "vaccination_center_modal", locals: {doctor: doctor} %>
+        </div>
       </p>
       <div class="attribute-buttons">
         <div class="btn btn-info"><%= link_to 'Edit', edit_doctor_path(doctor) %></div>
