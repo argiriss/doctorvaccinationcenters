@@ -1,8 +1,16 @@
-<tr>
-  <td><%= vaccination_center.name %></td>
-  <td><%= vaccination_center.address %></td>
-  <td><%= vaccination_center.zip %></td>
-  <td><%= link_to 'Show', vaccination_center %></td>
-  <td><%= link_to 'Edit', edit_vaccination_center_path(vaccination_center) %></td>
-  <td><%= link_to 'Destroy', vaccination_center, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>
+<div class="col-md-4">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title"><%= link_to "#{vaccination_center.name}", vaccination_center %></h4>
+      <p class="card-text">
+        <%= vaccination_center.address %>
+        <%= vaccination_center.zip %>
+      </p>
+      <p>
+        <%= link_to 'Show', vaccination_center %>
+        <%= link_to 'Edit', edit_vaccination_center_path(vaccination_center) %>
+        <%= link_to 'Destroy', vaccination_center, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    </div>
+  </div>
+</div>
