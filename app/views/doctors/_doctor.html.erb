@@ -1,15 +1,14 @@
-<div class="col-md-4">
+<div class="col-md-4 col-sm-12">
   <div class="card">
     <div class="card-body">
-      <h4 class="card-title"><%= link_to "#{doctor.name}", doctor %></h4>
+      <h4 class="card-title text-center"><%= link_to "#{doctor.name}", doctor %></h4>
       <p class="card-text">
-        <%= doctor.speciality %>
-        <%= doctor.vaccination_centers.size %>
+        <strong>Speciality: </strong><%= doctor.speciality %><br>
+        <strong>Vaccination Centers: </strong> <span class="vaccination-centers-number"><%= doctor.vaccination_centers.size %></span>
       </p>
-      <p>
-        <%= link_to 'Show', doctor %>
-        <%= link_to 'Edit', edit_doctor_path(doctor) %>
-        <%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="attribute-buttons">
+        <div class="btn btn-info"><%= link_to 'Edit', edit_doctor_path(doctor) %><div>
+        <div class="btn btn-danger"><%= link_to 'Destroy', doctor, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </p>
     </div>
   </div>
