@@ -16,11 +16,14 @@
 
  @import "bootstrap";
 
- .attribute-buttons {
-  float: right;
+ a {
+   text-decoration: none;
  }
-
+ 
+ .attribute-buttons {
+   float: right;
+ }
+ 
  .attribute-buttons a {
-  color: white;
-  text-decoration: none;
+   color: white;
  }
