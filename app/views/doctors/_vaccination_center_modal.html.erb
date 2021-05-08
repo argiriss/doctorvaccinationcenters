@@ -1,0 +1,21 @@
+<div class="modal fade" id=<%= "doctor-#{doctor.id}-modal" %> tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Dr. <%= "#{doctor.name}" %>'s Vaccination Centers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="names">
+          <ul>
+            <% doctor.vaccination_centers.each do |vaccination_center|%>
+              <li><%= link_to vaccination_center.name, vaccination_center %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
