@@ -13,6 +13,9 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'kaminari'
+gem 'jquery-rails'
+gem 'bootstrap'
+gem 'mini_racer', platforms: :ruby
 
 group :development do
   gem 'web-console', '>= 3.3.0'
