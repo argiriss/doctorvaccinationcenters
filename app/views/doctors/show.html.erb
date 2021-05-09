@@ -1,11 +1,6 @@
-<p>
-  <strong>Name:</strong>
-  <%= @doctor.name %>
-</p>
+<h1 class="text-center"><%= "#{ @doctor.name } (#{ @doctor.speciality })" %></h1>
 
-<p>
-  <strong>Speciality:</strong>
-  <%= @doctor.speciality %>
-</p>
+<p> Doctor is operating at the following vaccination_centers: </p>
+<%= render partial: "doctor_vaccination_centers_list", locals: {doctor: @doctor} %>
 
-<%= link_to 'Back', doctors_path %>
+<%= link_to 'Back', doctors_path, class: "back-button btn btn-secondary" %>

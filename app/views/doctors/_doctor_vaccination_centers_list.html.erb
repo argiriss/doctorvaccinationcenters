@@ -1,0 +1,7 @@
+<div class="names">
+  <ul>
+    <% doctor.vaccination_centers.each do |vaccination_center|%>
+      <li><%= link_to vaccination_center.name, vaccination_center %></li>
+    <% end %>
+  </ul>
+</div>

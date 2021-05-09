@@ -26,9 +26,18 @@
  
  .attribute-buttons a {
    color: white;
+   &:hover {
+     color: white;
+     text-decoration: none;
+   }
  }
 
-//  Pagination
+ .back-button {
+  width: 60px;
+  margin-top: 15px;
+ }
+
+// Pagination
 .pagination a, .pagination span.current, .pagination span.gap {
   float: left;
   padding: 0 14px;
